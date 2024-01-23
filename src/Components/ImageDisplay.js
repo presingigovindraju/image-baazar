@@ -1,26 +1,31 @@
-import React,{useState} from "react";
+import React,{useState,useEffect} from "react";
 import axios from "axios";
 
 
 
 
-const ImageDisplay =()=>{
+const ImageDisplay =({setFullData})=>{
 
     const [search,setSearch] = useState('')
+    useEffect(()=>{
+        heandlingSearch()
+    },[])
 
     function heandlingSearch(e){
-         e.preventDefault()
+         if(e){
+            e.preventDefault()
+        }
          axios.get("https://api.unsplash.com/search/photos",
          {
             headers:{
                 "Accept-Version" : "v1",
-                Authorization:"Client-ID R26xop_HBblEtVVa4OmLioVFzn-qkRJRl2Wj04lGwQA"
+                "Authorization":`Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`
             },
-            params:{
-                query : search
+            params:{ 
+                query : search || "random"
             }
          })
-         .then((responce)=>{console.log(responce.data)})
+         .then((responce)=>{setFullData(responce.data.results)})
          .catch((error)=>{console.log(error)})
     }
 
