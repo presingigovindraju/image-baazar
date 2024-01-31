@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import ImageDisplay from "./Components/ImageDisplay";
 import ToDisplay from "./Components/ToDisplay";
-
+import "./Style.css"
 
 const App =()=>{
 
@@ -9,10 +9,9 @@ const App =()=>{
 
 
   return (
-    <div>
-      <h1>Image Bazaar</h1>
+    <div className="toMakeBackGrounColor">
       <ImageDisplay setFullData={setFullData}/>
-      <ToDisplay fullData={fullData}/>
+      <ToDisplay  className="imageDisplay" fullData={fullData}/>
     </div>
   )
 }

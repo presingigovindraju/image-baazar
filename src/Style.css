@@ -1,0 +1,47 @@
+.formMiddle{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.imageDisplay{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+.imageSize{
+    border-radius: 20px;
+    height: 350px;
+    width: 420px;
+    margin: 10px;
+}
+.imageGap{
+    margin-left: 70px;
+}
+.imageSize:hover{
+    height: 400px;
+    width: 520px;
+
+}
+input{
+    height: 30px;
+    width: 900px;
+    border-radius: 15px;
+    padding-left: 20px;
+    border: none;
+}
+button{
+    height: 35px;
+    margin-left: 20px;
+    border-radius: 15px;
+    border: none;
+}
+button:hover{
+    background-color: tomato;
+}
+h1{
+    margin-left: 350px;
+    color: tomato;
+}
+.toMakeBackGrounColor{
+    background-color: rgb(5, 30, 38);
+}

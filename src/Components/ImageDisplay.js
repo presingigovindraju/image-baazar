@@ -22,7 +22,8 @@ const ImageDisplay =({setFullData})=>{
                 "Authorization":`Client-ID ${process.env.REACT_APP_UNSPLASH_ACCESS_KEY}`
             },
             params:{ 
-                query : search || "random"
+                query : search || "random",
+                per_page :30
             }
          })
          .then((responce)=>{setFullData(responce.data.results)})
@@ -31,10 +32,13 @@ const ImageDisplay =({setFullData})=>{
 
 
     return (
-        <div>
+        <div className="formMiddle">
+            
             <form onSubmit={heandlingSearch}>
+                <h1>Image Bazaar</h1>
                 <input type="text" placeholder="Enter Search" onChange={(e)=>setSearch(e.target.value)} value={search}/>
                 <button type="submit">Submit</button>
+                {/* <a href="/"><button  type="submit" class="bn30">Button</button></a> */}
             </form>
         </div>
     )

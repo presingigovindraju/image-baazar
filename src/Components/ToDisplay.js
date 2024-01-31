@@ -8,13 +8,12 @@ const ToDisplay = ({fullData})=>{
 
 
     return(
-        <div>
+        <div className="imageGap">
             {
                 fullData.map((item)=>(
-                    <img key={item.id} src={item.urls.small_s3} alt={item.alt_description}/>
+                    <img className="imageSize" key={item.id} src={item.urls.small_s3} alt={item.alt_description}/>
                 ))
             }
-
         </div>
     )
 }
