@@ -51,7 +51,7 @@ h1{
 @media screen and (max-width:768px){
     input{
         height: 30px;
-        width: 300px;
+        width: 265px;
     }
     h1{
         margin-left: -40pxpx;
@@ -62,4 +62,9 @@ h1{
         flex-direction: column;
         width: auto;
     } */
+    .imageSize{
+        height: 280px;
+        width: 360px;
+        margin: 10px;
+    }
 }
