@@ -51,10 +51,10 @@ h1{
 @media screen and (max-width:768px){
     input{
         height: 30px;
-        width: 265px;
+        width: 240px;
     }
     h1{
-        margin-left: -40pxpx;
+        margin-left: 25px;
          width: auto;
     }
     /* .formMiddle{
@@ -63,8 +63,12 @@ h1{
         width: auto;
     } */
     .imageSize{
-        height: 280px;
-        width: 360px;
-        margin: 10px;
+        height: 230px;
+        width: 250px;
+        /* margin:-10px; */
+    }
+    .imageSize:hover{
+        height: 250px;
+        width: 270px;
     }
 }
